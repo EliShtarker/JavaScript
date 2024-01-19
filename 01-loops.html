@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+<body>
+   
+<script>
+document.write("ex.1 <br/><br/>")
+document.write(`for (let i = 1; i <= 99; i++) {
+    document.write(i+" ")
+}<br/><br/>`)
+for (let i = 1; i <= 99; i++) {
+    document.write(i+" ")
+}
+document.write("<br/><br/><hr/>")
+
+
+document.write("ex.2 <br/><br/>")
+document.write(`for (let i = 99; i >= 1; i-=1) {
+    document.write(i+" ")
+}<br/><br/>`)
+for (let i = 99; i >= 1; i-=1) {
+    document.write(i+" ")
+}
+document.write("<br/><br/><hr/>")
+
+document.write(`for(let i=99;i >= 2; i-=1){
+document.write(i%2?"":i+" ")
+}`)
+document.write("ex.3 <br/><br/>")
+for(let i=99;i >= 2; i-=1){
+document.write(i%2?"":i+" ")
+}
+
+
+
+document.write("<br/><br/><hr/>")
+document.write("ex.4 <br/><br/>")
+let input = prompt("Enter a number:");
+let i = parseInt(input);
+document.write(`let i = parseInt(input);<br/>
+for(;i >= 1; i -= 1){
+!isNaN(i)||i<0?document.write(i + " "):undefined;
+}<br/><br/>`)
+for(;i >= 1; i -= 1){
+!isNaN(i)||i<=0?document.write(i + " "):undefined;
+}   
+
+document.write("<br/><br/><hr/>")
+document.write(`for(i=5;i>=0;i-=1){
+document.write(i==0?'\u{1F382}':i+" ")
+}<br/><br/>`)
+document.write("ex.5<br/><br/>")
+for(i=5;i>=0;i-=1){
+document.write(i==0?'\u{1F382}':i+" ")
+}   
+
+
+
+ 
+
+  </script>
+
+
+</script>    
+</body>
+</html>
