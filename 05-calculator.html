@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .btn {
+            width: 40px;
+            border: 1px solid null;
+            border-radius: 15px;
+            margin-left: 2px;
+        }
+
+        input {
+            background-color: black;
+            border: 1px solid null;
+            border-radius: 15px;
+            color: white;
+        }
+
+        #marioBox {
+            font-size: large;
+            border-radius: 5px;
+            background-color: orange;
+            color: white;
+            width: 30px;
+            margin: 2px;
+        }
+
+        #newStart {
+            font-size: large;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            width: 30px;
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input id="number1" type="number" />
+    <input id="number2" type="number" />
+    <button onmouseover="text()" onclick="questionMark()" id="marioBox">?</button>
+    <button onclick="reset()" id="newStart">C</button>
+    <br /><br />
+    <button onmouseover="plus()" onclick="plus()" class="btn">+</button>
+    <button onmouseover="minus()" onclick="minus()" onmouseout="" class="btn">-</button>
+    <button onmouseover="multi()" onclick="multi()" class="btn">x</button>
+    <button onmouseover="devide()" onclick="devide()" class="btn">:</button>
+    <button onmouseover="percent()" onclick="percent()" class="btn">%</button>
+    <button onmouseover="power()" onclick="power()" class="btn">^</button>
+    <p id="number3"></p>
+
+    <script>
+        function plus() {
+            let plus = document.getElementById("number3")
+            let x = parseFloat(document.getElementById("number1").value);
+            let y = parseFloat(document.getElementById("number2").value);
+            plus.innerHTML = ("Result:" + (x + y));
+        }
+
+        function minus() {
+            let x = parseFloat(document.getElementById("number1").value);
+            let y = parseFloat(document.getElementById("number2").value);
+            document.getElementById("number3").innerHTML = ("Result:" + (x - y));
+        }
+
+        function multi() {
+            let x = parseFloat(document.getElementById("number1").value);
+            let y = parseFloat(document.getElementById("number2").value);
+            document.getElementById("number3").innerHTML = ("Result:" + (x * y));
+        }
+
+        function devide() {
+            let result = document.getElementById("number3");
+            let x = parseFloat(document.getElementById("number1").value);
+            let y = parseFloat(document.getElementById("number2").value);
+            result.innerHTML = (x == 0 || y == 0 ? "<span style='color:red;'>Result:NaN</span>" : "Result:" + (x / y));
+        }
+
+        function percent() {
+            let x = parseFloat(document.getElementById("number1").value / 100);
+            let y = parseFloat(document.getElementById("number2").value);
+            document.getElementById("number3").innerHTML = ("Result:" + (x * y));
+        }
+
+        function reset() {
+            document.getElementById("number1").value = "";
+            document.getElementById("number2").value = "";
+            document.getElementById("number3").innerHTML = "";
+        }
+
+        function questionMark() {
+            let randomX = Math.floor(Math.random() * 1000);
+            let randomY = Math.floor(Math.random() * 1000);
+            randomX = Math.random() < 0.5 ? -randomX : randomX;
+            randomY = Math.random() < 0.5 ? -randomY : randomY;
+            document.getElementById("number1").value = randomX;
+            document.getElementById("number2").value = randomY;
+        }
+
+        function text() {
+            document.getElementById("number3").innerHTML = "Random numbers ?";
+        }
+
+        function power() {
+            let plus = document.getElementById("number3")
+            let x = parseFloat(document.getElementById("number1").value);
+            let y = parseFloat(document.getElementById("number2").value);
+            plus.innerHTML = ("Result:" + (x ** y));
+        }
+
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', function () {
+                this.style.backgroundColor = 'green';
+                this.style.color = 'white';
+            });
+
+            button.addEventListener('mouseout', function () {
+                this.style.backgroundColor = '';
+                this.style.color = '';
+            });
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
