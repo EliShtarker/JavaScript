@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write("EX:01<br/>")
+        function ex1() {
+            let x = 0;
+            let y = 0;
+            document.write(x == y ? "ture" : "false");
+        }
+        ex1()
+        document.write("<hr/>")
+
+        document.write("EX:02<br/>")
+        function ex2() {
+            x = 5; y = 6; z = 2
+            let smallest = Math.min(x, y, z);
+            document.write("The smallest number is: " + smallest);
+        }
+        ex2()
+        document.write("<hr/>")
+
+        document.write("EX:03<br/>")
+        function ex3() {
+            let sesamie = 3
+            let java = "java"
+            for (i = 1; i <= sesamie; i++) {
+                document.write(java);
+            }
+        }
+        ex3()
+        document.write("<hr/>")
+
+        document.write("EX:04<br/>")
+        function ex4(){
+            let i="Hatsune"
+            let y="miku"
+            document.write(i.length>y.length?i:y)
+        }
+        ex4()
+
+        document.write("<hr/>")
+        document.write("EX:05<br/>")
+
+        function ex5(){
+        let AmountOfArraysLength = 5;
+        let NewArray = new Array(AmountOfArraysLength).fill(0)
+
+        for (let i = 0; i < NewArray.length; i++) {
+            NewArray[i] = i
+            document.write(NewArray[i]+1+ ' ')
+        }
+    }
+        ex5()
+        document.write("<br/><br/>")
+        function ex5two(){
+        let AmountOfArraysLength = 20;
+        let NewArray = new Array(AmountOfArraysLength).fill(0)
+
+        for (let i = 0; i < NewArray.length; i++) {
+            NewArray[i] = i
+            document.write(NewArray[i]+1+ ' ')
+        }
+    }
+    ex5two()
+    </script>
+</body>
+
+</html>
