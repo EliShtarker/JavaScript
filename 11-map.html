@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<br/>
+    <script>
+        document.write("ex.1<br/><br/>Celsius [0, 30, 100]")
+        const celsius = [0, 30, 100];
+        document.write("<br/><br/> Fahrenheit " + celsius.map(n => n * 9 / 5 + 32))
+        document.write("<hr/>")
+
+        document.write(`ex.2<br/><br/>["Alice", "Bob", "Charlie"]`)
+        const names = ["Alice", "Bob", "Charlie"];
+        document.write("<br/><br/>" + names.map(n => "Hello " + n))
+        document.write("<hr/>")
+
+
+        //can also do numbers.map(n=>(n-n-n))
+        document.write(`ex.3<br/><br/>[2, -4, 5, -8]`)
+        const numbers = [2, -4, 5, -8];
+        document.write("<br/><br/>" + numbers.map(n => (n * -1)))
+        document.write("<hr/>")
+
+        document.write(`ex.4<br/><br/>[10, 20, 30, 40]<br/><br/>`)
+        const nums = [10, 20, 30, 40];
+        let sum = 0;
+        nums.forEach(n => {
+            sum += n;
+        });
+        document.write(sum + "<hr/>");
+
+        document.write(`ex.5<br/><br/>['JavaScript', 'is', 'awesome']<br/><br/>`)
+        const words = ['JavaScript', 'is', 'awesome'];
+        words.forEach(n => {
+            document.write(n + " ")
+        });
+        document.write("<hr/>");
+
+
+        document.write(`ex.6<br/><br/>[2, 4, 6, 8, 10]<br/><br/>`)
+        const numbers2 = [2, 4, 6, 8 , 10];
+
+        let allEven = true;
+        numbers2.forEach(n => {
+            n% 2 !== 0 ? allEven=false:undefined
+        });
+
+        document.write(allEven==true?"All numbers are even":"Not all the numbers are even");
+
+
+
+    </script>
+</body>
+
+</html>
