@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade orgenaizer</title>
+</head>
+
+<body>
+    <Script>
+        let student_in_class = parseInt(prompt('How many students?'))
+        let grades = new Array(student_in_class).fill(0)
+
+        for (let i = 0; i < grades.length; i++) {
+            grades[i] = parseInt(prompt('Enter grade for student array #' + i))
+        }
+
+        document.write('Excellent: ')
+        for (let i = 0; i < grades.length; i++) {
+            if (grades[i] >= 90) {
+                document.write(grades[i] + ' ')
+            }
+        }
+
+        document.write('<br />')
+        document.write('Good: ')
+        for (let i = 0; i < grades.length; i++) {
+            if (grades[i] >= 70 && grades[i] <= 89) {
+                document.write(grades[i] + ' ')
+            }
+        }
+
+        document.write('<br />')
+        document.write('Average: ')
+        for (let i = 0; i < grades.length; i++) {
+            if (grades[i] >= 50 && grades[i] <= 69) {
+                document.write(grades[i] + ' ')
+            }
+        }
+
+        document.write('<br />')
+        document.write('Weak: ')
+        for (let i = 0; i < grades.length; i++) {
+            if (grades[i] < 50) {
+                document.write(grades[i] + ' ')
+            }
+        }
+
+
+
+    </Script>
+</body>
+
+</html>
