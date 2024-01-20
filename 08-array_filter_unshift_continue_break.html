@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write("EX:1")
+        function Than100(numbers) {
+            return numbers.filter(number => number > 100);
+        }
+
+        let inputArray = [6, 200, 300, 800, 1, 99];
+        let resultArray = Than100(inputArray);
+
+        document.write("<br/>" + resultArray);
+        document.write("<hr/>")
+        document.write("EX:2")
+        function filterNumbers(numbers) {
+            return numbers.filter(number => number % 2 === 0);
+        }
+
+
+        let array = [7, 200, 300, 800, 1, 99];
+        let evenNumbers = filterNumbers(array);
+        document.write("<br/>" + evenNumbers);
+        document.write("<hr/>")
+        document.write("EX:3")
+        function filterOddNumbers(numbers) {
+            return numbers.filter(number => number % 2 !== 0);
+        }
+
+
+        let array2 = [7, 200, 300, 800, 1, 99];
+        let oddNumbers = filterOddNumbers(array);
+        document.write("<br/>" + oddNumbers);
+        document.write("<hr/>")
+        document.write("EX:4")
+        function filterThreeLetters(words) {
+            return words.filter(word => word.length >= 3);
+        }
+
+        let array3 = ["hello", "js", "am", "is", "are", "great"];
+        let filteredWords = filterThreeLetters(array3);
+
+        document.write("<br/>" + filteredWords);
+        document.write("<hr/>")
+        document.write("EX:5<br/>")
+        function SmallerThan10(numbers) {
+            let filteredNumbers = numbers.filter(number => number < 10);
+
+
+            document.write('Original Array: [' + numbers.join(', ') + ']<br>');
+
+
+            document.write('Smaller than 10: [' + filteredNumbers.join(', ') + ']');
+        }
+
+
+        let array4 = [15, 3, 20, 9, 2, 30];
+        SmallerThan10(array);
+        document.write("<hr/>")
+        document.write("EX:6<br/>")
+        function filterStringsLength(strings, length) {
+            return strings.filter(str => str.length === length);
+        }
+
+
+        let inputArray2 = ["apple", "cat", "dog", "banana", "car"];
+        let givenLength = 3;
+        let resultArray2 = filterStringsLength(inputArray2, givenLength);
+
+        document.write(resultArray2)
+        document.write("<hr/>")
+        document.write("EX:7<br/>")
+        function filterNotDivisibleBy3(numbers) {
+            let filteredNumbers = numbers.filter(number => number % 3 !== 0);
+            return filteredNumbers;
+        }
+
+
+        let array5 = [3, 5, 6, 7, 9, 11];
+        let result = filterNotDivisibleBy3(array5);
+        document.write(result);
+        document.write("<hr/>")
+        document.write("EX:8<br/>")
+        function filterUpperCaseCharacters(inputString) {
+            return inputString.split('').filter(char => char === char.toUpperCase()).join('');
+        }
+
+
+        let inputString = "Hello World";
+        let result2 = filterUpperCaseCharacters(inputString);
+        document.write(result2);
+        document.write("<hr/>")
+        document.write("EX:9<br/>")
+        let numbersArray = [];
+
+        while (true) {
+            let userInput = parseInt(prompt("Enter a number:"));
+
+            if (isNaN(userInput)) {
+                console.log("Invalid input. Please enter a number.");
+                continue;
+            }
+
+            if (userInput > 0) {
+                numbersArray.push(userInput);
+            } else if (userInput < 0) {
+                numbersArray.unshift(userInput);
+            } else if (userInput === 999) {
+                let poppedNumber = numbersArray.pop();
+                console.log(`Popped number from the right: ${poppedNumber}`);
+            } else if (userInput === 555) {
+                let shiftedNumber = numbersArray.shift();
+                console.log(`Shifted number from the left: ${shiftedNumber}`);
+            } else if (userInput === 0) {
+                continue;
+            } else if (userInput === -1010) {
+                break;
+            }
+
+            console.log("Updated array:", numbersArray);
+        }
+
+        console.log("Loop ended.");
+
+
+    </script>
+</body>
+
+</html>
