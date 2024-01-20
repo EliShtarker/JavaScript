@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+
+<body>
+    <script>
+        document.write("EX:1" + "<br /><br />");
+
+        document.write("In do for <br /><br />");
+
+        for (i = 12; i <= 24; i++) {
+            document.write(i + ' ');
+        }
+
+        document.write("<br /><br /><br />");
+
+        document.write("In do while <br /><br />");
+
+        let a = 12;
+
+        do {
+            document.write(a + ' ');
+            a++;
+        } while (a <= 24);
+
+        //end
+
+        document.write("<hr />");
+
+        //start of EX:2
+
+
+        document.write("EX:2" + "<br /><br />");
+
+        document.write("In do for <br /><br />");
+
+        for (i = 7; i <= 37; i += 2) {
+            document.write(i + ' ');
+        }
+
+        document.write("<br /><br /><br />");
+
+        document.write("In do while <br /><br />");
+
+        let b = 7;
+        do {
+            document.write(b + ' ');
+            b += 2;
+        } while (b <= 37);
+        document.write("<br />");
+
+        //end
+
+        document.write("<hr />");
+
+        //start of EX:3
+
+        document.write("EX:3" + "<br /><br />");
+
+        document.write("In do for <br /><br />");
+
+        for (i = 10; i >= -20; i -= 2) {
+            document.write(i + ' ');
+        }
+
+        document.write("<br /><br />");
+
+
+        document.write("In do while <br /><br />");
+
+        let c = 10;
+        do {
+            document.write(c + ' ');
+            c -= 2;
+        } while (c >= -20);
+        document.write("<br />");
+
+        //end
+
+        document.write("<hr />");
+
+        document.write("EX:4 + bonus (console.log)" + "<br /><br />");
+
+        //this is the bonus if statemnts using ? & :
+        for (i = 1; i <= 46; i++) {
+            console.log((i % 3 === 0 && i % 5 === 0) ? 'FizzBuzz' : (i % 3 === 0 ? 'Fizz' : '') + (i % 5 === 0 ? 'Buzz' : '') || i)
+        }
+
+
+        document.write("In do for <br /><br />");
+
+        for (let i = 1; i <= 45; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                document.write("(FizzBuzz)" + ' ');
+            } else if (i % 3 === 0) {
+                document.write("(Fizz)" + ' ');
+            } else if (i % 5 === 0) {
+                document.write("(Buzz)" + ' ');
+            } else {
+                document.write(i + ' ');
+            }
+        }
+
+        document.write("<br /><br />");
+
+        document.write("In do while <br /><br />");
+
+        let d = 1;
+
+        do {
+            if (d % 3 === 0 && d % 5 === 0) {
+                document.write("(FizzBuzz)" + ' ');
+            } else if (d % 3 === 0) {
+                document.write("(Fizz)" + ' ');
+            } else if (d % 5 === 0) {
+                document.write("(Buzz)" + ' ');
+            } else {
+                document.write(d + ' ');
+            }
+
+            d++;
+        } while (d <= 45);
+
+
+        document.write("<br />");
+
+        document.write("<hr />");
+
+        document.write("EX:5" + "<br /><br />");
+
+        function math(Array) {
+            let sum = 0;
+
+            for (let i = 0; i < Array.length; i++) {
+                sum += Array[i];
+            }
+
+            document.write("The sum of the numbers is: " + sum);
+        }
+
+        let Array = [1, 13, 22, 123, 49, 34, 5, 24, 57, 45];
+        math(Array);
+
+        document.write("<br />");
+        document.write("<hr />");
+        document.write("EX:6" + "<br /><br />");
+        document.write("console command list:<br /><br />removeProperty(students, 'city','country','age','lastName','firstName','id');<br />printProperties(students);");
+        function removeProperty(studentsArray, propertyToRemove) {
+            studentsArray.forEach(student => {
+                if (propertyToRemove in student) {
+                    delete student[propertyToRemove];
+                }
+            });
+        }
+
+
+        function printProperties(studentsArray) {
+            studentsArray.forEach(student => {
+                console.log(`Student ID: ${student.id}`);
+                console.log(`First Name: ${student.firstName}`);
+                console.log(`Last Name: ${student.lastName}`);
+                console.log(`Age: ${student.age}`);
+                console.log(`Country: ${student.country}`);
+                console.log(`City: ${student.city}`);
+                console.log('---------------------------');
+            });
+        }
+
+
+        const students = [
+            { id: 1, firstName: 'John', lastName: 'Doe', age: 25, country: 'USA', city: 'New York' },
+            { id: 2, firstName: 'Jane', lastName: 'Smith', age: 22, country: 'Canada', city: 'Toronto' },
+        ];
+
+        document.write("<br />");
+        document.write("<hr />");
+        document.write("EX:7" + "<br /><br />");
+
+        const ourPets = [
+            {
+                animalType: "cat",
+                names: [
+                    "Meowzer",
+                    "Fluffy",
+                    "Kit-Cat"
+                ]
+            },
+            {
+                animalType: "dog",
+                names: [
+                    "Spot",
+                    "Bowser",
+                    "Frankie"
+                ]
+            }
+        ];
+        function catsNames() {
+            document.write("Cat names:" + ourPets[0].names)
+        }
+        catsNames()
+        document.write("<br /><br />");
+        function dogsNames() {
+            document.write("Cat names:" + ourPets[1].names)
+        }
+        dogsNames()
+
+
+        document.write("<br />");
+        document.write("<hr />");
+        document.write("EX:8" + "<br /><br />");
+        const student = {
+            name: 'John',
+            age: 20,
+            hobbies: ['reading', 'games', 'coding'],
+        };
+
+
+
+        function studentInfo() {
+            document.write(student.name + "<br/>", student.age + "<br/>", student.hobbies)
+        }
+
+        studentInfo()
+
+        document.write("<br /><br />");
+        function add() {
+            student.hobbies[3] = "guitar"
+        }
+
+        add()
+        studentInfo()
+
+        document.write("<br/><br/>")
+        function remove() {
+            student.hobbies[3] = undefined
+        }
+
+        remove()
+        studentInfo()
+        document.write("<br/><br/>")
+
+        student.fname = "jerbi";
+        function newInfo() {
+            document.write(student.name + "<br/>", student.fname + "<br/>", student.age + "<br/>", student.hobbies)
+        }
+        newInfo()
+
+        document.write("<br />");
+        document.write("<hr />");
+        document.write("EX:9" + "<br /><br />");
+        document.write('2D Array:<br />');
+        function print2(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    document.write(arr[i][j] + ' ');
+                }
+                document.write('<br>');
+            }
+        }
+
+        let twoDArray = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+
+        print2(twoDArray);
+
+        document.write("<br />");
+        document.write("<hr />");
+        document.write("EX:10" + "<br /><br />");
+
+        function zerosInMatrix(matrix) {
+            let zeroCount = 0;
+
+            document.write('Matrix:');
+            for (let i = 0; i < matrix.length; i++) {
+                document.write('<br>');
+                for (let j = 0; j < matrix[i].length; j++) {
+                    document.write(matrix[i][j] + ' ');
+                    if (matrix[i][j] === 0) {
+                        zeroCount++;
+                    }
+                }
+            }
+
+            document.write('<br><br>');
+            document.write(`Number of zeros in the matrix: ${zeroCount}`);
+        }
+
+
+        let arr = [
+            [0, 1, 1],
+            [0, 1, 0],
+            [1, 0, 0]
+        ];
+
+        zerosInMatrix(arr);
+        document.write("<br />");
+        document.write("<hr />");
+        document.write("EX:11" + "<br /><br />");
+
+
+        function findDup(arr) {
+            let seen = {};
+            let duplicates = [];
+
+            document.write('Original Array: ' + JSON.stringify(arr) + '<br>');
+
+            arr.forEach(element => {
+                if (seen[element] === undefined) {
+                    seen[element] = 1;
+                } else if (seen[element] === 1) {
+                    duplicates.push(element);
+                    seen[element]++;
+                }
+            });
+
+            document.write('Repeated more than once: ' + JSON.stringify(duplicates));
+        }
+
+
+        let arr2 = [4, 2, 34, 4, 1, 12, 1, 4];
+        findDup(arr2);
+
+        document.write("<br />");
+        document.write("<hr />");
+        document.write("EX:12" + "<br /><br />");
+
+        function reverseArray(arr) {
+            let reversedArray = [];
+
+            for (let i = arr.length - 1; i >= 0; i--) {
+                reversedArray.push(arr[i]);
+            }
+
+
+            document.write('Original Array: ' + JSON.stringify(arr) + '<br>');
+
+
+            document.write('Reversed Array: ' + JSON.stringify(reversedArray));
+        }
+
+
+        let arr3 = [43, "what", 9, true, "cannot", false, "be", 3, true];
+        reverseArray(arr3);
+
+        document.write("<br />");
+        document.write("<hr />");
+        document.write("EX:13" + "<br /><br />");
+        let arr_3 = [4, 6, 7];
+        let arr_4 = [8, 1, 9];
+
+        let sumArray = [];
+
+        for (let i = 0; i < arr_3.length; i++) {
+            sumArray.push(arr_3[i] + arr_4[i]);
+        }
+        document.write(sumArray);
+
+        document.write("<br />");
+        document.write("<hr />");
+        document.write("EX:14" + "<br /><br />");
+        function isPalindrome(str) {
+
+            let cleanedStr = str.replace(/\s/g, '').toLowerCase();
+            let reversedStr = cleanedStr.split('').reverse().join('');
+
+            return cleanedStr === reversedStr;
+        }
+
+        let str1 = "racecar";
+        let str2 = "Java";
+
+        document.write("string1 palindrome?: " + (isPalindrome(str1) ? "Yes" : "No") + "<br>");
+        document.write("string2 palindrome?: " + (isPalindrome(str2) ? "Yes" : "No") + "<br>");
+        document.write("<br />");
+        document.write("<hr />");
+        document.write("EX:15" + "<br /><br />");
+
+        let counter = 1;
+
+        while (counter < 100) {
+            counter *= 2;
+        }
+        document.write(counter);
+
+
+        document.write("<br />");
+        document.write("<hr />");
+        document.write("EX:16" + "<br /><br />");
+        let counter2 = 900000;
+        while (counter2 > 50) {
+            counter2 /= 2;
+        }
+        document.write(counter2);
+
+        document.write("<br />");
+        document.write("<hr />");
+        document.write("EX:17" + "<br /><br />in the console");
+        function ex17() {
+            let names = ['Chris', 'Kevin', 'Naveed', 'Pete', 'Victor'];
+            let copiedNames = [];
+            let index = 0;
+
+            while (index < names.length) {
+                copiedNames.push(names[index]);
+                index++;
+            }
+
+            console.log(copiedNames);
+        }
+        ex17()
+        document.write("<br />");
+        document.write("<hr />");
+        document.write("EX:17" + "<br /><br /> in the console");
+        function sameValue(array) {
+            let index = 0;
+
+            while (index < array.length - 1) {
+                if (array[index] === array[index + 1]) {
+                    return index;
+                }
+                index++;
+            }
+
+            return -1;
+        }
+
+    
+        let array1 = [true, false, false, true, true, false];
+        console.log(sameValue(array1)); 
+
+        let array2 = [true, false, true, false, true, true];
+        console.log(sameValue(array2)); 
+
+        let array3 = [true, false, true, false, true, false];
+        console.log(sameValue(array3));
+
+
+
+    </script>
+</body>
