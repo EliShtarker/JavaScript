@@ -60,32 +60,32 @@
             let plus = document.getElementById("number3")
             let x = parseFloat(document.getElementById("number1").value);
             let y = parseFloat(document.getElementById("number2").value);
-            plus.innerHTML = ("Result:" + (x + y));
+            plus.innerHTML = (x<0?"First number can't be -":"Result:" + (x + y));
         }
 
         function minus() {
             let x = parseFloat(document.getElementById("number1").value);
             let y = parseFloat(document.getElementById("number2").value);
-            document.getElementById("number3").innerHTML = ("Result:" + (x - y));
+            document.getElementById("number3").innerHTML = (x<0?"First number can't be -":"Result:" + (x - y));
         }
 
         function multi() {
             let x = parseFloat(document.getElementById("number1").value);
             let y = parseFloat(document.getElementById("number2").value);
-            document.getElementById("number3").innerHTML = ("Result:" + (x * y));
+            document.getElementById("number3").innerHTML = (x<0?"First number can't be -":"Result:" + (x * y));
         }
 
         function devide() {
             let result = document.getElementById("number3");
             let x = parseFloat(document.getElementById("number1").value);
             let y = parseFloat(document.getElementById("number2").value);
-            result.innerHTML = (x == 0 || y == 0 ? "<span style='color:red;'>Result:NaN</span>" : "Result:" + (x / y));
+            result.innerHTML = (x == 0 || y == 0 ? "<span style='color:red;'>Result:NaN</span>" :x<0?"First number can't be -":"Result:" + (x / y));
         }
 
         function percent() {
             let x = parseFloat(document.getElementById("number1").value / 100);
             let y = parseFloat(document.getElementById("number2").value);
-            document.getElementById("number3").innerHTML = ("Result:" + (x * y));
+            document.getElementById("number3").innerHTML = (x<0?"First number can't be -":"Result:" + (x * y));
         }
 
         function reset() {
@@ -111,7 +111,7 @@
             let plus = document.getElementById("number3")
             let x = parseFloat(document.getElementById("number1").value);
             let y = parseFloat(document.getElementById("number2").value);
-            plus.innerHTML = ("Result:" + (x ** y));
+            plus.innerHTML = (x<0?"First number can't be -":"Result:" + (x ** y));
         }
 
         const buttons = document.querySelectorAll('.btn');
